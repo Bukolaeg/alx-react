@@ -9,21 +9,20 @@ class Notifications extends PureComponent {
 	  constructor(props) {
 		      super(props);
 		      //this.markAsRead = this.markAsRead.bind(this);
-		  //  }
-		  //    /*
-		  //      markAsRead(id) {
-		  //          console.log(`Notification ${id} has been marked as read`);
-		  //            }
-		  //              shouldComponentUpdate(nextProps) {
-		  //                  return (
-		  //                        nextProps.listNotifications.length >
-		  //                                this.props.listNotifications.length ||
-		  //                                      nextProps.displayDrawer !== this.props.displayDrawer
-		  //                                          );
-		  //                                          }
-		  //                                         */
-render() {
-	const {
+		  }
+		      /*
+		        markAsRead(id) {
+	          console.log(`Notification ${id} has been marked as read`);
+		             }
+		               shouldComponentUpdate(nextProps) {
+		                    return (
+		                          nextProps.listNotifications.length >
+                                this.props.listNotifications.length ||                                      nextProps.displayDrawer !== this.props.displayDrawer
+				);
+				}
+	*/
+	render() {;
+		const {
 		displayDrawer,
 		listNotifications,
 		handleDisplayDrawer,
@@ -94,6 +93,7 @@ Notifications.defaultProps = {
 	handleHideDrawer: () => {},
 	markNotificationAsRead: () => {},
 };
+
 Notifications.propTypes = {
 	displayDrawer: PropTypes.bool,
 	listNotifications: PropTypes.arrayOf(NotificationItemShape),
@@ -101,10 +101,12 @@ Notifications.propTypes = {
 	handleHideDrawer: PropTypes.func,
 	markNotificationAsRead: PropTypes.func,
 };
-const screenSize = {
+
+	const screenSize = {
 	small: '@media screen and (max-width: 900px)',
 };
-const opacityKf = {
+
+	const opacityKf = {
 	from: {
 		opacity: 0.5,
 	},
@@ -112,7 +114,8 @@ const opacityKf = {
 		opacity: 1,
 	},
 };
-const translateYkf = {
+
+	const translateYkf = {
 '0%':{
 	transform: 'translateY(0)',
 },
@@ -124,8 +127,9 @@ const translateYkf = {
 	'100%': {
 		transform: 'translateY(0)',
 	},
-};
-const borderKf = {
+}
+
+	const borderKf = {
 '0%': {
 	border: `3px dashed cyan`,
 },
@@ -133,7 +137,8 @@ const borderKf = {
 	border: `3px dashed #e0344a`,
 },
 };
-const styles = StyleSheet.create({
+
+	const styles = StyleSheet.create({
 	notifications: {
 		fontSize: '20px',
 		border: 'thin dotted #e0344a',
